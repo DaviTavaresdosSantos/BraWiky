@@ -8,23 +8,11 @@
 </head>
 <body>
     
-    <header class="menu">
-
-        <img src="insert/Logo.png" alt="">
-
-        <ul>
-
-            <li><a style="color: black; font-weight: bold;" href="">Início</a></li>
-            <li><a href="regiao.html">Regiões</a></li>
-            <li><a href="">Sobre</a></li>
-
-        </ul>
-
-    </header>
+   <div id = "header"></div>
 
     <main>
 
-         <h1>Bem-vindo ao <span style=" color: #31a010;"">BRAWIKY</span> </h1>
+         <h1>Bem-vindo ao <span style=" color: #31a010;">BRAWIKY</span> </h1>
          <div class="barra"> </div>
 
          <p>Aqui no <span class="negrito">BRAWIKY</span>, você encontrará informações organizadas sobre cada uma das regiões <br>
@@ -67,6 +55,11 @@
 
 
     </main>
+
+
+    <script>
+        fetch("header.html").then(r => r.text()).then(t => document.getElementById("header").innerHTML = t);
+      </script>
 
 </body>
 </html>
