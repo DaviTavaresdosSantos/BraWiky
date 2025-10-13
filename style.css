@@ -1,0 +1,166 @@
+/*--------------------Geral--------------------*/
+
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,p{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.menu{
+
+    background: linear-gradient(to bottom, #31a010 50%, #2cab17 50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.menu img{
+
+    width: 4vw;
+    margin-left: 7vw;
+
+}
+
+.menu ul{
+
+    display: flex;
+    margin-right: 10vw;
+
+}
+
+ul{
+
+    list-style-type: none;
+   
+
+}
+
+ul  a{
+
+    color: white;
+    text-decoration: none;
+    margin: 2vw;
+    font-size: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+/*--------------------Início--------------------*/
+
+
+
+
+main{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main h1{
+
+    margin-top: 7vw;
+    font-size: 2vw;
+
+}
+
+main p{
+
+    text-align: center;
+    max-width: 56vw;
+    margin-top: 2vw;
+    font-size: 1.5vw;
+
+}
+
+.barra{
+
+    background-color: grey;
+    width: 70vw;
+    height: 0.5vw;
+
+}
+
+
+.negrito{
+
+    font-weight: bold;
+
+}
+
+.Mapa{
+
+    margin-top: 90px;
+    margin-right: 100px;
+    position: relative;
+}
+
+
+.norte{
+
+    
+    width: 400.6px;
+    display: flex;
+
+}
+
+.centro-oeste{
+
+    position: absolute;
+    top: 187px;
+    left: 175px;
+    width: 224px;
+
+}
+
+.nordeste{
+
+    position: absolute;
+    top: 98px;
+    left: 365px;
+    width: 192px;
+
+}
+
+.sudeste{
+
+    position: absolute;
+    top: 285px;
+    left: 299px;
+    width: 189.2px;
+
+}
+
+.sul{
+
+    position: absolute;
+    top: 404px;
+    left: 233px;
+    width: 135px;
+
+
+
+
+}
+
+.legenda{
+
+    position: relative;
+    top: 350px;
+    left: 100px;
+    width: 550px;
+
+
+}
+
+
+/*--------------------Região--------------------*/
