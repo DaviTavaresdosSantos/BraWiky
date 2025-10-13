@@ -58,7 +58,10 @@
 
 
     <script>
-        fetch("header.html").then(r => r.text()).then(t => document.getElementById("header").innerHTML = t);
+        fetch("header.html")
+        .then(r => r.text())
+        .then(t => document.getElementById("header").innerHTML = t)
+        .then(() => document.getElementById("Início").style.cssText = "color: black; font-weight: bold;");
       </script>
 
 </body>

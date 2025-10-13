@@ -8,21 +8,42 @@
 </head>
 <body>
     
-    
-    <header class="menu">
 
-        <img src="insert/Logo.png" alt="">
-
-        <ul>
-
-            <li><a href="index.html">Início</a></li>
-            <li><a  style="color: black; font-weight: bold;" href="">Regiões</a></li>
-            <li><a href="">Sobre</a></li>
-
-        </ul>
-
-    </header>
+    <div id="header"></div>
 
 
+
+    <main>
+
+        <h1>Regiõe</h1>
+         <div class="barra"> </div>
+
+         <p>As <span class="negrito">Regiões</span> do Brasil, segundo o <span class="negrito">Instituto Brasileiro de Geografia e Estatística (IBGE)</span>, são cinco grandes divisões territoriais criadas para organizar o país, baseadas em características naturais e socioeconômicas. As cinco regiões brasileiras são: <span class="negrito">Norte, Nordeste, Centro-Oeste, Sudeste e Sul.</span> </p>
+
+
+         <div  class="Região">
+
+
+            <img src="insert/norte.png" alt="" class= "norte-grid">
+            <img src="insert/centro-oeste.png" alt="" class="centro-oeste-grid">
+            <img src="insert/Nordeste.png" alt="" class="nordeste-grid">
+            <img src="insert/sul.png" alt="" class="sul-grid">
+            <img src="insert/sudeste.png" alt="" class="sudeste-grid">
+
+         </div>
+
+    </main>
+
+
+
+
+    <script>
+
+       fetch("header.html")
+        .then(r => r.text())
+        .then(t => document.getElementById("header").innerHTML = t)
+        .then(() => document.getElementById("Regiões").style.cssText = "color: black; font-weight: bold;");
+
+    </script>
 </body>
 </html>
