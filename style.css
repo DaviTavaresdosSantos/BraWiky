@@ -168,42 +168,51 @@ main p{
 
 .norte-grid{
 
+    width: 25vw;
     grid-area: norte;
 
 }
 
 .centro-oeste-grid{
 
+    width: 20vw;
     grid-area: centro-oeste;
 
 }
 
 .nordeste-grid{
 
+    width: 17vw;
     grid-area: nordeste;
 
 }
 
 .sudeste-grid{
 
+    width: 21vw;
     grid-area: sudeste;
 
 }
 
 .sul-grid{
 
+    width: 17vw;
     grid-area: sul;
 
 }
 
 .Região{
     display: grid;
-    
+
+    gap:4vw;
+    margin-top: 10vw;
+
     grid-template-areas:
+    
 
     "norte nordeste"
     "sudeste centro-oeste"
-    "sul"
+    "sul sul"
 
     ;
 
