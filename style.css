@@ -198,6 +198,7 @@ main p{
 
     width: 17vw;
     grid-area: sul;
+    justify-self: center;
 
 }
 
@@ -205,8 +206,7 @@ main p{
     display: grid;
 
     gap:4vw;
-    margin-top: 10vw;
-
+    margin-top: 1vw;
     grid-template-areas:
     
 
