@@ -168,40 +168,65 @@ main p{
 
 .norte-grid{
 
-    width: 25vw;
+
     grid-area: norte;
+
+}
+.norte-grid img{
+    
+    width: 25vw;
 
 }
 
 .centro-oeste-grid{
 
-    width: 20vw;
     grid-area: centro-oeste;
+
+}
+
+.centro-oeste-grid img{
+
+    width: 20vw;
 
 }
 
 .nordeste-grid{
 
-    width: 17vw;
+
     grid-area: nordeste;
+
+}
+
+.nordeste-grid img{
+
+    width: 17vw;
 
 }
 
 .sudeste-grid{
 
-    width: 21vw;
+
+
     grid-area: sudeste;
 
 }
 
+.sudeste-grid img{
+
+    width: 21vw;
+
+}
 .sul-grid{
 
-    width: 17vw;
     grid-area: sul;
     justify-self: center;
 
 }
 
+.sul-grid img{
+    
+    width: 17vw;
+}
 .Região{
     display: grid;
 
