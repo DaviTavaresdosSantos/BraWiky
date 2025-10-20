@@ -166,72 +166,24 @@ main p{
 
 /*--------------------Região--------------------*/
 
-.norte-grid{
+.norte-grid h1{grid-area: norte;}.norte-grid img{width: 25vw;}
+
+.centro-oeste-grid{grid-area: centro-oeste;} .centro-oeste-grid img{width: 20vw;}
+
+.nordeste-grid h1{grid-area: nordeste;} .nordeste-grid img{width: 17vw;}
+
+.sudeste-grid{grid-area: sudeste;} .sudeste-grid img{width: 21vw;}
+
+.sul-grid{grid-area: sul ;} .sul-grid img{ width: 17vw;}
 
 
-    grid-area: norte;
-
-}
-.norte-grid img{
-    
-    width: 25vw;
-
-}
-
-.centro-oeste-grid{
-
-    grid-area: centro-oeste;
-
-}
-
-.centro-oeste-grid img{
-
-    width: 20vw;
-
-}
-
-.nordeste-grid{
-
-
-    grid-area: nordeste;
-
-}
-
-.nordeste-grid img{
-
-    width: 17vw;
-
-}
-
-.sudeste-grid{
-
-
-
-    grid-area: sudeste;
-
-}
-
-.sudeste-grid img{
-
-    width: 21vw;
-
-}
-.sul-grid{
-
-    grid-area: sul;
-    justify-self: center;
-
-}
-
-.sul-grid img{
-    
-    width: 17vw;
-}
 .Região{
     display: grid;
-
-    gap:4vw;
+    gap: 0vw 15vw;
     margin-top: 1vw;
+    text-align: center;
+
+
     grid-template-areas:
     
 
@@ -241,4 +193,9 @@ main p{
 
     ;
 
+} .Região h1{
+
+    margin-bottom: 3vw;
+
 }
+
