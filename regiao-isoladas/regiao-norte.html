@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <div id="regiao-geral"></div>
+
+    <canvas id="meuGrafico" width="1000" height="600"></canvas>
+
+    <script>
+        fetch("regiao-geral.html")
+            .then(r => r.text())
+            .then(t => {
+                document.getElementById("regiao-geral").innerHTML = t;
+                
+                <!---Alterando valores-->
+                document.getElementById("nome_regiao").textContent = "Região Norte"
+                document.getElementById("img").src =  "../insert/norte.png"
+                document.getElementById("População").textContent = "18,6 Milhões"
+                document.getElementById("PIB").textContent = "5,7% (~R$ 478 bi)"
+                document.getElementById("Area").textContent = "3.853.677 Km²"
+                document.getElementById("IDH").textContent = "0,66 - 0,69"
+                document.getElementById("ponto01").textContent = "Floresta Amazônica - (AM)"
+                document.getElementById("ponto02").textContent = "Ilha de Marajó - (PA)"
+                document.getElementById("ponto03").textContent = "Jalapão - (TO)"
+
+
+
+
+
+
+
+            
+                const ctx = document.getElementById('meuGrafico');
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['', '', ''],
+                        datasets: [{
+                            data: [91.83, 6.40, 51.00],
+                            backgroundColor: ['blue', 'red', 'green'],
+                            borderRadius: 10
+                        }]
+                    },
+                    options: {
+                        responsive: false,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false 
+                            },
+                            tooltip: {
+                                enabled: true
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                ticks: {
+                                    callback: function(value) { return value + '%'; }
+                                }
+                            }
+                        }
+                    }
+                });
+
+            });
+    </script>
+</body>
+</html>

@@ -199,3 +199,33 @@ main p{
 
 }
 
+/*--------------------Região_modelo--------------------*/
+
+.circulo-legenda{
+
+    width:15px; 
+    height:15px; 
+    background-color: none; 
+    display:inline-block; 
+    border-radius: 100px;
+    margin-left: 40px;
+
+
+}
+
+
+.grafico-legenda{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    margin-top: 100px;
+
+}
+
+span{
+
+  font-weight: normal;
+}

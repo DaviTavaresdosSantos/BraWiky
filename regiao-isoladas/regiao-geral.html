@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    
+    
+    <header class="menu">
+
+        <img src="../insert/Logo.png" alt="">
+
+        <ul>
+
+            <li><a id = "Início" href="../index.html">Início</a></li>
+            <li><a id ="Regiões" href="../regiao.html" style="color: black; font-weight: bold;">Regiões</a></li>
+            <li><a id="Sobre" href="regiao-isoladas/regiao-geral.html">Sobre</a></li>
+
+        </ul>
+
+    </header>
+
+    <main>
+
+        <div style="display: flex; flex-direction: column; align-items: center;">
+
+            <h1 id = "nome_regiao" style="margin-bottom: 1.5vw;">nome_região</h1>
+            <img id = "img" src="../insert/12831079.jpg" alt="" style="width:30vw;">
+
+        </div>
+
+        <div>
+            
+            <h1>População Total: <span id="População">valor </span></h1>
+            <div class="barra"></div>
+
+            <h1>PIB Regional: <span id="PIB">Valor</span></h1>
+            <div class="barra"></div>
+
+            <h1>Área Territorial: <span id="Area">valor</span></h1>
+            <div class="barra"></div>
+
+            <h1>IDH Média da região: <span id="IDH">valor</span></h1>
+            <div class="barra"></div>
+
+
+            <div class="grafico-legenda">
+
+                <div>
+
+                    <span class="texto-legenda"> <span class="circulo-legenda"  style="background-color: blue;"></span> Alfabetização ≥ 15 </span>
+                    <span class="texto-legenda"> <span class="circulo-legenda"  style="background-color: red;"></span> Analfabetismo ≥ 15 </span>
+                    <span class="texto-legenda"> <span class="circulo-legenda"  style="background-color: green;"></span>  Ensino médio completo 25 anos ou mais </span>
+
+
+                </div>
+               
+                <canvas id="meuGrafico" width="1000" height="600"></canvas>
+
+            </div>
+            
+
+            <h1>Pontos Turísticos: <span id="Pontos">Valor</span></h1>
+            <div class="barra"></div>
+
+            <ul style="list-style-type: disc; font-size: 32px; margin-top: 40px; margin-left: 40px;">
+                <li id = "ponto01">
+                    ponto 01
+                </li>
+                <li id = "ponto02">
+                    ponto02
+                </li>
+                <li id="ponto03">
+                    ponto03
+                </li>
+            </ul>
+
+
+        </div>  
+
+    </main>
+</body>
+</html>
