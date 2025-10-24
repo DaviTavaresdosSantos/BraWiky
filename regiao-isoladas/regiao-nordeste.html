@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <div id="regiao-geral"></div>
+
+    <canvas id="meuGrafico" width="1000" height="600"></canvas>
+
+    <script>
+        fetch("regiao-geral.html")
+            .then(r => r.text())
+            .then(t => {
+                document.getElementById("regiao-geral").innerHTML = t;
+                
+                <!---Alterando valores-->
+                document.getElementById("nome_regiao").textContent = "Região Nordeste"
+                document.getElementById("img").src =  "../insert/Nordeste.png"
+                document.getElementById("img").style = "width:20vw;:"
+                document.getElementById("População").textContent = "54,6 Milhões"
+                document.getElementById("PIB").textContent = "13,8% (~R$ 1,08 tri)"
+                document.getElementById("Area").textContent = "1.558.000 Km²"
+                document.getElementById("IDH").textContent = "0,66 - 0,72"
+                document.getElementById("ponto01").textContent = "Chapada Diamantina (BA);"
+                document.getElementById("ponto02").textContent = "Porto de Galinhas (PE);"
+                document.getElementById("ponto03").textContent = "Jericoacoara - (CE)."
+
+
+
+
+
+
+
+            
+                const ctx = document.getElementById('meuGrafico');
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['', '', ''],
+                        datasets: [{
+                            data: [91.83, 6.40, 51.00],
+                            backgroundColor: ['blue', 'red', 'green'],
+                            borderRadius: 10
+                        }]
+                    },
+                    options: {
+                        responsive: false,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false 
+                            },
+                            tooltip: {
+                                enabled: true
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                ticks: {
+                                    callback: function(value) { return value + '%'; }
+                                }
+                            }
+                        }
+                    }
+                });
+
+            });
+    </script>
+</body>
+</html>
