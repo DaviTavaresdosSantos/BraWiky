@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BraWiky</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <main>
+
+         <h1>Sobre o Projeto</h1>
+         <div class="barra"> </div>
+         
+         
+         <p class="paragrafo">O <span class="BraWiky">BRAWIKY</span> nasceu com o objetivo de tornar o aprendizado sobre o Brasil mais acessível, 
+        interessante e dinâmico. A ideia surgiu quando percebemos que muitas pessoas, incluindo estudantes, 
+        professores e curiosos, tinham dificuldade em encontrar informações completas e organizadas sobre cada 
+        região do país. Queríamos criar um espaço onde fosse fácil aprender sobre a diversidade cultural, 
+        geográfica e histórica do Brasil.</p>
+            
+        <p class="paragrafo">Desde a sua criação, o <span class="BraWiky">BRAWIKY</span> se dedica a reunir informações confiáveis, curiosidades e dados importantes 
+        sobre todas as regiões brasileiras. Nosso objetivo é que cada visitante, ao explorar o site, descubra o que 
+        torna cada parte do Brasil única e especial. Para isso, organizamos o conteúdo de maneira clara e interativa: 
+        <span class="negrito">você pode clicar nas regiões do mapa ou navegar pelo menu para conhecer melhor cada estado e suas características</span></p>
+        
+        <p class="paragrafo"> Mais do que apenas informações, queremos despertar a curiosidade e o interesse pelo nosso país. Acreditamos que conhecer 
+            o Brasil é também valorizar sua diversidade, sua história e sua cultura. Por isso, o <span class="BraWiky">BRAWIKY</span> está sempre em busca de formas 
+            novas e criativas de apresentar o conhecimento, tornando o estudo do Brasil uma experiência educativa e divertida.</p>
+
+            <p class="paragrafo">Nossa missão é que, ao visitar o <span class="BraWiky">BRAWIKY</span>, você sinta que aprender sobre o Brasil é fácil, prazeroso e inspirador. <span class="negrito">Queremos 
+            ser uma ponte entre o conhecimento e quem deseja conhecer melhor este país tão rico e diverso.</span></p>
+
+
+            <div class="contatos">
+                
+                <div>
+
+                    <img src="insert/instagram.png.png" alt="">
+                    <h1>https://instagram.com/brawiky.oficial</h1>
+
+                </div>
+                
+                <div>
+
+                    <img src="insert/email.png.png" alt="">
+                    <h1>contato@brawiky.example.com</h1>
+
+                </div>
+                
+                <div>
+
+                    <img src="insert/whatsapp.png.png" alt="">
+                    <h1>+55 (69) 9 9876-5432</h1>
+
+                </div>
+                
+                <div>
+
+                    <img src="insert/endereço.png.png" alt="">
+                    <h1>Rua das Regiões, 123 — Bairro Central, Porto Velho — RO</h1>
+
+            </div>
+
+                </div>
+              
+
+
+    </main>
+
+    
+    <script>
+        fetch("header.html")
+        .then(r => r.text())
+        .then(t => document.getElementById("header").innerHTML = t)
+        .then(() => document.getElementById("Sobre").style.cssText = "color: black; font-weight: bold;");
+    </script>
+</body>
+</html>

@@ -12,6 +12,7 @@ h1,h2,h3,h4,p,span,li{
 
 }
 
+
 .menu{
 
     background: linear-gradient(to bottom, #31a010 50%, #2cab17 50%);
@@ -94,6 +95,13 @@ main p{
 .negrito{
 
     font-weight: bold;
+
+}
+
+.BraWiky{
+
+ color: #00bf63;
+ font-weight: bold;
 
 }
 
@@ -228,4 +236,14 @@ main p{
 span{
 
   font-weight: normal;
+}
+
+/*--------------------Sobre--------------------*/
+
+.paragrafo{
+
+    text-indent: 90px;
+    text-align: justify;
+    max-width: 70vw;
+    margin: 3px;
 }
