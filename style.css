@@ -248,3 +248,40 @@ span{
 }
 
 
+/*--------------------media--------------------*/
+
+@media(max-width: 400px){
+
+.menu img{
+
+    width: 10vw;
+    margin-left: 5vw ;
+
+}
+
+ul a{
+
+    font-size: 3vw;
+
+}
+
+.paragrafo{
+
+    text-indent: 10vw;
+    max-width: 80vw;
+    font-size: 5vw;
+
+}
+.barra{
+
+    width: 90vw;
+    height: 1vw;
+
+}
+#titulo{
+
+    font-size: 7vw;
+
+}
+}
+
