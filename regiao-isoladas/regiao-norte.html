@@ -37,7 +37,7 @@
             
                 const ctx = document.getElementById('meuGrafico');
 
-                new Chart(ctx, {
+                const meuGrafico = new Chart(ctx, {
                     type: 'bar',
                     data: {
                         labels: ['', '', ''],
@@ -74,20 +74,25 @@
                         const largura = window.innerWidth;
                         const img = document.getElementById("img")
                         const grafico = document.getElementById("meuGrafico")
+
                         if (largura < 500) {
                             img.style.width = "60vw";
-                            grafico.style.width = "400px"
+                            grafico.style.width = "300px"
+                            grafico.style.height = "250px"
 
                         } else if (largura > 1000) {
                             img.style.width = "30vw";
-                            grafico.style.width = "1000px"
-                        } 
+                            grafico.style.width = "600px"
+                            grafico.style.height= "500px"
+
+                        }
                         img.style.height = "auto";
                     }
 
+                    meuGrafico.resize()
                     ajustarImagem(); // chama ao carregar
                     window.addEventListener("resize", ajustarImagem); // chama ao redimensionar
-
+                    
 
 
             });
