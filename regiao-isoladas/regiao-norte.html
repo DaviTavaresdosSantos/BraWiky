@@ -11,7 +11,7 @@
 
     <div id="regiao-geral"></div>
 
-    <canvas id="meuGrafico"></canvas>
+    <canvas id="meuGrafico" width="1000" height="600"></canvas>
 
     <script>
         fetch("regiao-geral.html")
@@ -19,16 +19,23 @@
             .then(t => {
                 document.getElementById("regiao-geral").innerHTML = t;
 
-                document.getElementById("nome_regiao").textContent = "Região Norte";
-                document.getElementById("img").src =  "../insert/norte.png";
-                document.getElementById("População").textContent = "18,6 Milhões";
-                document.getElementById("PIB").textContent = "5,7% (~R$ 478 bi)";
-                document.getElementById("Area").textContent = "3.853.677 Km²";
-                document.getElementById("IDH").textContent = "0,66 - 0,69";
-                document.getElementById("ponto01").textContent = "Floresta Amazônica - (AM)";
-                document.getElementById("ponto02").textContent = "Ilha de Marajó - (PA)";
-                document.getElementById("ponto03").textContent = "Jalapão - (TO)";
+                document.getElementById("nome_regiao").textContent = "Região Norte"
+                document.getElementById("img").src =  "../insert/norte.png"
+                document.getElementById("img").style = "width:30vw;:"
+                document.getElementById("População").textContent = "18,6 Milhões"
+                document.getElementById("PIB").textContent = "5,7% (~R$ 478 bi)"
+                document.getElementById("Area").textContent = "3.853.677 Km²"
+                document.getElementById("IDH").textContent = "0,66 - 0,69"
+                document.getElementById("ponto01").textContent = "Floresta Amazônica - (AM)"
+                document.getElementById("ponto02").textContent = "Ilha de Marajó - (PA)"
+                document.getElementById("ponto03").textContent = "Jalapão - (TO)"
 
+
+            
+
+
+
+            
                 const ctx = document.getElementById('meuGrafico');
 
                 const meuGrafico = new Chart(ctx, {
@@ -42,49 +49,27 @@
                         }]
                     },
                     options: {
-                        responsive: false, // mantém tamanho fixo
+                        responsive: false,
                         maintainAspectRatio: false,
                         plugins: {
-                            legend: { display: false },
-                            tooltip: { enabled: true }
+                            legend: {
+                                display: false 
+                            },
+                            tooltip: {
+                                enabled: true
+                            }
                         },
                         scales: {
                             y: {
                                 beginAtZero: true,
                                 max: 100,
-                                ticks: { callback: function(value) { return value + '%'; } }
+                                ticks: {
+                                    callback: function(value) { return value + '%'; }
+                                }
                             }
                         }
                     }
                 });
-
-                function ajustarImagem() {
-                    const largura = window.innerWidth;
-                    const img = document.getElementById("img");
-                    const grafico = document.getElementById("meuGrafico");
-
-                    if (!img || !grafico) return;
-
-                    if (largura <= 500) {          // Celular
-                        img.style.width = "90vw";
-                        grafico.width = 400;
-                        grafico.height = 250;
-                    } else if (largura <= 1000) {  // Tablet
-                        img.style.width = "60vw";
-                        grafico.width = 600;
-                        grafico.height = 400;
-                    } else {                        // Desktop
-                        img.style.width = "30vw";
-                        grafico.width = 1000;
-                        grafico.height = 500;
-                    }
-
-                    img.style.height = "auto";
-                    meuGrafico.resize(); // redesenha o gráfico
-                }
-
-                ajustarImagem(); 
-                window.addEventListener("resize", ajustarImagem);
 
             });
     </script>
