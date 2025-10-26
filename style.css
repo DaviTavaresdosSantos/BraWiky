@@ -252,26 +252,20 @@ span{
 
 @media(max-width: 500px){
 
+/*Geral*/
 .menu img{
 
-    width: 10vw;
+    width: 15vw;
     margin-left: 5vw ;
 
 }
 
 ul a{
 
-    font-size: 3vw;
+    font-size: 4vw;
 
 }
 
-.paragrafo{
-
-    text-indent: 10vw;
-    max-width: 80vw;
-    font-size: 5vw;
-
-}
 .barra{
 
     width: 90vw;
@@ -283,5 +277,129 @@ ul a{
     font-size: 7vw;
 
 }
+
+/*Sobre*/
+.paragrafo{
+
+    text-indent: 10vw;
+    max-width: 80vw;
+    font-size: 5vw;
+
 }
+
+/*Regiões*/
+
+main p{
+
+    max-width: 90vw;
+    font-size: 4vw;
+
+}
+
+.norte-grid h1{grid-area: norte; font-size: 6vw;}.norte-grid img{width: 40vw;}
+
+.centro-oeste-grid h1{grid-area: centro-oeste; font-size: 6vw;} .centro-oeste-grid img{width: 35vw;}
+
+.nordeste-grid h1{grid-area: nordeste; font-size: 6vw;} .nordeste-grid img{width: 30vw;}
+
+.sudeste-grid h1 {grid-area: sudeste; font-size: 6vw;} .sudeste-grid img{width: 35vw;}
+
+.sul-grid h1{grid-area: sul ; font-size: 6vw;} .sul-grid img{ width: 25vw;}
+
+
+/*Inicio*/
+
+.norte{
+
+    
+    width: 200px;
+    grid-area: norte;
+
+}
+
+.centro-oeste{
+
+    position: absolute;
+    top: 94px;
+    left: 87px;
+    width: 112px;
+    
+
+}
+
+.nordeste{
+
+    position: absolute;
+    top: 50px;
+    left: 180px;
+    width: 96px;
+
+}
+
+.sudeste{
+
+    position: absolute;
+    top: 143px;
+    left: 149px;
+    width: 94px;
+
+}
+
+.sul{
+
+    position: absolute;
+    top: 200px;
+    left: 117px;
+    width:  67px;
+
+
+
+
+}
+
+.legenda{
+
+    position: relative;
+    top: 250px;
+    left: 0px;
+    width: 350px;
+
+
+}
+
+/*Regiões Isolado*/
+
+#nome_regiao{
+
+    font-size: 8vw;
+
+}
+
+#regiao-isolado{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#regiao-isolado h1{
+
+    font-size: 5vw;
+
+}
+
+#menor{
+
+    display: block;
+
+}
+
+#ponto01,#ponto02,#ponto03{
+
+    font-size: 5vw;
+
+}
+
+}
+
 

@@ -8,18 +8,17 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    
+
     <div id="regiao-geral"></div>
 
-    <canvas id="meuGrafico" width="1000" height="600"></canvas>
+    <canvas id="meuGrafico"></canvas>
 
     <script>
         fetch("regiao-geral.html")
             .then(r => r.text())
             .then(t => {
                 document.getElementById("regiao-geral").innerHTML = t;
-                
-                <!---Alterando valores-->
+
                 document.getElementById("nome_regiao").textContent = "Região Norte"
                 document.getElementById("img").src =  "../insert/norte.png"
                 document.getElementById("População").textContent = "18,6 Milhões"
@@ -31,7 +30,23 @@
                 document.getElementById("ponto03").textContent = "Jalapão - (TO)"
 
 
+            function ajustarImagem() {
+                        const largura = window.innerWidth;
+                        const img = document.getElementById("img")
+                        const grafico = document.getElementById("meuGrafico")
+                        if (largura < 500) {
+                            img.style.width = "60vw";
+                            grafico.style.width = "400px"
 
+                        } else if (largura > 1000) {
+                            img.style.width = "30vw";
+                            grafico.style.width = "1000px"
+                        } 
+                        img.style.height = "auto";
+                    }
+
+                    ajustarImagem(); // chama ao carregar
+                    window.addEventListener("resize", ajustarImagem); // chama ao redimensionar
 
 
 
