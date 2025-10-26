@@ -30,24 +30,7 @@
                 document.getElementById("ponto03").textContent = "Jalapão - (TO)"
 
 
-            function ajustarImagem() {
-                        const largura = window.innerWidth;
-                        const img = document.getElementById("img")
-                        const grafico = document.getElementById("meuGrafico")
-                        if (largura < 500) {
-                            img.style.width = "60vw";
-                            grafico.style.width = "400px"
-
-                        } else if (largura > 1000) {
-                            img.style.width = "30vw";
-                            grafico.style.width = "1000px"
-                        } 
-                        img.style.height = "auto";
-                    }
-
-                    ajustarImagem(); // chama ao carregar
-                    window.addEventListener("resize", ajustarImagem); // chama ao redimensionar
-
+            
 
 
 
@@ -86,6 +69,26 @@
                         }
                     }
                 });
+
+                function ajustarImagem() {
+                        const largura = window.innerWidth;
+                        const img = document.getElementById("img")
+                        const grafico = document.getElementById("meuGrafico")
+                        if (largura < 500) {
+                            img.style.width = "60vw";
+                            grafico.style.width = "400px"
+
+                        } else if (largura > 1000) {
+                            img.style.width = "30vw";
+                            grafico.style.width = "1000px"
+                        } 
+                        img.style.height = "auto";
+                    }
+
+                    ajustarImagem(); // chama ao carregar
+                    window.addEventListener("resize", ajustarImagem); // chama ao redimensionar
+
+
 
             });
     </script>
