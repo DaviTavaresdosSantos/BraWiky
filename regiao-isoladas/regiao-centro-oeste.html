@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BraWiky</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     
     <div id="regiao-geral"></div>
 
-    <canvas id="meuGrafico" width="1000" height="600"></canvas>
+
+
 
     <script>
         fetch("regiao-geral.html")
@@ -22,7 +23,6 @@
                 <!---Alterando valores-->
                 document.getElementById("nome_regiao").textContent = "Região Centro-Oeste"
                 document.getElementById("img").src =  "../insert/centro-oeste.png"
-                document.getElementById("img").style = "width:20vw;:"
                 document.getElementById("População").textContent = "16,5 Milhões"
                 document.getElementById("PIB").textContent = "10,6% (~R$ 791)"
                 document.getElementById("Area").textContent = "1.606.372 Km²"
@@ -38,7 +38,8 @@
 
 
             
-                const ctx = document.getElementById('meuGrafico');
+                var ctx = document.getElementById('meuGrafico');
+                
 
                 new Chart(ctx, {
                     type: 'bar',
@@ -52,7 +53,8 @@
                     },
                     options: {
                         responsive: false,
-                        maintainAspectRatio: false,
+                        maintainAspectRatio: true
+                        ,
                         plugins: {
                             legend: {
                                 display: false 
@@ -75,5 +77,40 @@
 
             });
     </script>
+
+
+    <style>
+
+        @media (max-width: 500px) {
+            
+
+        #img{
+
+            width: 30vh;
+
+        }
+                        
+        #meuGrafico{
+            width: 500px;
+
+        } 
+
+        }
+
+        @media (min-width: 1040px) {
+        
+                        
+        #meuGrafico{
+            width: 1400px;
+            height: 900px;
+
+        } 
+        
+
+
+        }
+
+    </style>
+
 </body>
 </html>
